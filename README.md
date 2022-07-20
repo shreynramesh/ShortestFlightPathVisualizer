@@ -1,14 +1,30 @@
-# java-gradle-starter-project
+# Graphical Shortest FLight Path Project
 
-Here is a starter project for the ArcGIS Runtime SDK for Java with Gradle. 
+This is a project using  the ArcGIS Runtime SD for Java with Gradle. 
 
 The project includes the Gradle wrapper, so there is no need to install Gradle to run the app.
 
-The app launches a window displaying a map.
+The app launches a window displaying a map as well as a console which asks the user to
+type in 2 airports. They have 10,000+ airports to choose from which are auto-completed 
+as the user starts typing. Once the airports are selected and the search button is pressed,
+then the whole map will be revealed as well as a blue line depicting the shortest route between
+the 2 airports using Dijkstra's Algorithm. Routes between airports are chosen intuitively so flight 
+paths do not travel unnecessary distances or have more than 2 layovers. Additionally, there are two 
+options on the side of the screen to display the flight details or search for a new flight.
+
+NOTE: WHEN YOU PRESS DISPLAY ROUTE ON THE AIRPORT SEARCH SCREEN SOMETIMES THE FLIGHT DETAILS THAT
+SHOW UP TAB OUT AND THE MAP IS PURPOSELY LOCKED UNTIL YOU MINIMIZE THAT SCREEN. SO YOU MAY NEED TO 
+ALT-TAB.
+
+//TODO Bug: When searching for airports, when space is pressed it selects the top level airport 
+from the drop-down instead of actually typing a space.
+
+//TODO Bug: Flights can only fly 1 way around the globe at the moment and distances are only
+calculated in that way. So, Alaska to Russia is actually a very far flight.
 
 ![screenshot](screenshot.png)
 
-## Instructions
+## Instructions - FROM ARCGIS
 
 ### IntelliJ IDEA
 
@@ -31,45 +47,12 @@ The app launches a window displaying a map.
 8. In the Gradle Tasks view, double-click `copyNatives` under _java-gradle-starter-project > build_. This will unpack the native library dependencies to $USER_HOME/.arcgis.
 9. In the Gradle Tasks view, double-click `run` under _java-gradle-starter-project > application_ to run the app.
 
-### Command Line
-
-1. `cd` into the project's root directory.
-2. Run `./gradlew clean build` on Linux/Mac or `gradlew.bat clean build` on Windows.
-3. Run `./gradlew copyNatives` on Linux/Mac or `gradlew.bat copyNatives` on Windows. This will unpack the native library dependencies to $USER_HOME.arcgis.
-3. Run `./gradlew run` on Linux/Mac or `gradlew.bat run` on Windows to run the app.
 
 ## Requirements
 
 See the Runtime SDK's [system requirements](https://developers.arcgis.com/java/reference/system-requirements/).
-
-## Resources
-
-* [ArcGIS Runtime SDK for Java](https://developers.arcgis.com/java/)  
-* [ArcGIS Blog](https://blogs.esri.com/esri/arcgis/)  
-* [Esri Twitter](https://twitter.com/esri)  
+ 
 
 ## Issues
 
 Find a bug or want to request a new feature?  Please let us know by submitting an issue.
-
-## Contributing
-
-Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/esri/contributing).
-
-## Licensing
-
-Copyright 2019 Esri
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not 
-use this file except in compliance with the License. You may obtain a copy 
-of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software 
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT 
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the 
-License for the specific language governing permissions and limitations 
-under the License.
-
-A copy of the license is available in the repository's license.txt file.
