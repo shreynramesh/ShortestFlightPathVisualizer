@@ -1,4 +1,4 @@
-# Graphical Shortest FLight Path Project
+# Graphical Shortest Flight Path Project
 
 This is a project using  the ArcGIS Runtime SD for Java with Gradle. 
 
