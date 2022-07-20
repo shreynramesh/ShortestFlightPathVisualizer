@@ -22,6 +22,10 @@ from the drop-down instead of actually typing a space.
 //TODO Bug: Flights can only fly 1 way around the globe at the moment and distances are only
 calculated in that way. So, Alaska to Russia is actually a very far flight.
 
+** Future Plans: Currently working on transferring projects over to a web-based graphical interface
+using HTML, CSS, JavaScript, REST APIs or RPC, Neo4J or/and MongoDB and the Spring Framework with a 
+few extra functionalities.
+
 ![screenshot](screenshot.png)
 
 ## Instructions - FROM ARCGIS
