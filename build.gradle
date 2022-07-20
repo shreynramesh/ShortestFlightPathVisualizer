@@ -35,7 +35,10 @@ configurations {
 }
 
 dependencies {
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
     implementation "com.esri.arcgisruntime:arcgis-java:$arcgisVersion"
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
     natives "com.esri.arcgisruntime:arcgis-java-jnilibs:$arcgisVersion"
     natives "com.esri.arcgisruntime:arcgis-java-resources:$arcgisVersion"
     runtimeOnly "org.slf4j:slf4j-nop:1.7.32"
