@@ -1,6 +1,6 @@
 # Graphical Shortest Flight Path Project
 
-This is a project using  the ArcGIS Runtime SD for Java with Gradle. 
+This is a project using the ArcGIS Runtime SD for Java with Gradle. 
 
 The project includes the Gradle wrapper, so there is no need to install Gradle to run the app.
 
@@ -19,8 +19,7 @@ ALT-TAB.
 //TODO Bug: When searching for airports, when space is pressed it selects the top level airport 
 from the drop-down instead of actually typing a space.
 
-//TODO Bug: Flights can only fly 1 way around the globe at the moment and distances are only
-calculated in that way. So, Alaska to Russia is actually a very far flight.
+//TODO Bug: Flights cannot cross the prime meridian at the moment. So, Alaska to Russia is actually a very far flight.
 
 ** Future Plans: Currently working on transferring projects over to a web-based graphical interface
 using HTML, CSS, JavaScript, REST APIs or RPC, Neo4J or/and MongoDB and the Spring Framework with a 
