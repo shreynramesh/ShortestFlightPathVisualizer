@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+    <title>Shrey Ramesh - Contact</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <nav>
+        <ul id="gen-nav-links">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item active"><a href="about.html">About</a></li>
+            <li class="nav-item"><a href="experience.html">Experience</a></li>
+            <li style="float:right"><a href="contact.html">
+                <button class="contact-button">Contact</button>
+            </a></li>
+        </ul>
+    </nav>
+    <div class="contact-container">
+        <h2 style="font-family: Georgia, serif; text-align: center;">Contact Me!</h2>
+        <form>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>

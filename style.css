@@ -1,0 +1,358 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #06161B;
+}
+
+#home-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#home-content {
+    width: calc(100% - 100px);
+    height: calc(100% - 100px);
+    margin: 75px;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.50);
+    background-color: #081B21;
+    position: relative;
+}
+
+#home-title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+
+    color: white;
+    font-size: 64px;
+    font-family: Georgia, serif;
+}
+
+nav {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    width: 95%;
+}
+
+#gen-nav-links {
+    background-color: #06161B;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/*.nav-icon {*/
+/*    display: inline-block;*/
+/*    position: relative;*/
+/*    width: 24px;*/
+/*    height: 20px;*/
+/*}*/
+
+/*.nav-icon span {*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 2px;*/
+/*    background-color: #46E6CF;*/
+/*    !*transition: all 0.2s ease;*!*/
+/*}*/
+
+/*.nav-icon span:nth-child(1) {*/
+/*    top: 0;*/
+/*}*/
+
+/*.nav-icon span:nth-child(2) {*/
+/*    top: 50%;*/
+/*    transform: translateY(-50%);*/
+/*}*/
+
+/*.nav-icon span:nth-child(3) {*/
+/*    bottom: 0;*/
+/*}*/
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav-item {
+    float: left;
+}
+
+.nav-item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 36px;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+li a:hover:not(.active) {
+    background-color: #033133;
+}
+
+.active {
+    color: rgba(42, 198, 184, 0.97);
+}
+
+.contact-button {
+    background-color: rgba(59, 211, 206, 0.97);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.contact-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.about-content {
+    position: absolute;
+    top: 150px;
+    left: 200px;
+}
+
+.about-title h1 {
+    font-size: 48px;
+    color: white;
+    font-family: Georgia, serif;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.about-title span {
+    display: inline-block;
+    border-top: 1px solid rgba(59, 211, 206, 0.97);;
+    width: 1250px;
+    height: 13px;
+}
+
+#headshot {
+    width: 25%;
+    margin-left: 60px;
+    float: left;
+}
+
+.about-description {
+    display: inline-block;
+}
+
+.about-description dl {
+    position: relative;
+    display: inline-block;
+    color: white;
+    margin-left: 80px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+#about-description-title {
+    line-height: 5;
+}
+
+#about-description-text {
+    max-width: 525px;
+    float: left;
+    line-height: 1.5;
+}
+
+.about-project-button {
+    display: block;
+    background-color: #f8e6ce;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    margin-top: 100px;
+    position: absolute;
+    top: 545px;
+    left: 550px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+* { box-sizing: border-box; }
+
+.expanding-list {
+    max-width: 200px;
+    position: absolute;
+    margin: 10vh auto;
+    top: 50px;
+    left: 1300px;
+    background: #f8e6ce;
+    padding: 1.5em;
+    border-radius: 6px;
+}
+
+button[aria-expanded="true"] {
+    background: red;
+}
+
+#list {
+    max-height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    transition: max-height 1.2s ease-in-out;
+    transition-timing-function: cubic-bezier(.22,.68,0,1.71);
+}
+#list li {
+    background: white;
+    border-radius: 2px;
+    margin: 0 0 2px 0;
+    padding: 2px;
+    text-align: center;
+}
+
+#list[data-open="true"] {
+    overflow: auto;
+    max-height: 16em;
+    animation: hide-scroll 1s backwards;
+}
+#list @keyframes hide-scroll {
+    from, to { overflow: hidden; }
+}
+
+#toggle-button {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+/*Experience Page*/
+.experience-content {
+    margin: 100px 50px;
+    font-family: Georgia, serif;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.column img:hover {
+    opacity: 1;
+    border-radius: 50px;
+    transition-duration: 1s;
+}
+.img-content{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The expanding image container */
+.container {
+    position: relative;
+    display: flex;
+}
+
+/* Expanding image text */
+#img-text {
+    position: absolute;
+    bottom: 100px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+#expandedImg{
+    width: 100%;
+    height: 550px;
+    opacity: 1;
+}
+
+#philips-description {
+    display: none;
+}
+
+#amazon-description {
+    display: none;
+}
+
+#quik-routes-description {
+    display: none;
+}
+
+#rocket-league-description {
+    display: none;
+}
+
+/*Contact Form*/
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: rgba(59, 211, 206, 0.97);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #93b9ba;
+}
+
+.contact-container {
+    border-radius: 5px;
+    background-color: #efeae4;
+    padding: 20px;
+    margin: 200px 150px;
+}

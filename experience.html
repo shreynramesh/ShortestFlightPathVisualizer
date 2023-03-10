@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<head>
+    <title>Shrey Ramesh - Experiences/Projects</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<script>
+    window.onload = function () {
+        let map = {};
+        map["philips-logo.jpg"] = "#philips-description";
+        map["amazon-logo.jpg"] = "#amazon-description";
+        map["quikRoutes.jpg"] = "#quik-routes-description";
+        map["rocket-league.png"] = "#rocket-league-description"
+
+        const imgContents = document.querySelectorAll('.img-content');
+        imgContents.forEach((imgContent) => {
+            imgContent.addEventListener('click', () => {
+                const url = imgContent.getAttribute('src');
+                const newUrl = document.querySelector('#expandedImg').getAttribute('src');
+                document.querySelector('#expandedImg').setAttribute('src', url);
+                imgContent.setAttribute('src', newUrl);
+
+                if(url === "welcome.png") {
+                    document.querySelector('#expandedImg').style.opacity = "1";
+                }
+
+                if(map.hasOwnProperty(url)) {
+                    let newImageID = document.querySelector(map[url]);
+                    newImageID.style.display = "block";
+                    document.querySelector('#expandedImg').style.opacity = "0.2";
+                }
+
+                if(map.hasOwnProperty(newUrl)) {
+                    let oldImageID = document.querySelector(map[newUrl]);
+                    oldImageID.style.display = "none";
+                }
+            });
+        });
+    }
+</script>
+
+<body>
+    <nav>
+        <ul id="gen-nav-links">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item active"><a href="about.html">About</a></li>
+            <li class="nav-item"><a href="experience.html">Experience</a></li>
+            <li style="float:right"><a href="contact.html">
+                <button class="contact-button">Contact</button>
+            </a></li>
+        </ul>
+    </nav>
+
+    <div class="experience-content"><!-- The four columns -->
+        <div class="row">
+            <div class="column">
+                <img class="img-content" src="philips-logo.jpg" alt="philips-logo">
+            </div>
+            <div class="column">
+                <img class="img-content" src="amazon-logo.jpg" alt="amazon-logo">
+            </div>
+            <div class="column">
+                <img class="img-content" src="quikRoutes.jpg" alt="quik-routes">
+            </div>
+            <div class="column">
+                <img class="img-content" src="rocket-league.png" alt="rocket-league">
+            </div>
+        </div>
+
+        <div class="container">
+            <img id="expandedImg" src="welcome.png">
+            <div id="img-text">
+                <div id="philips-description">
+                    <p>Software Engineering Intern &ndash; Phillips&nbsp;May 2022 &ndash; August 2022</p>
+                    <p>HealthTech&ndash; Languages and Technologies: Java, Agile, Spring, REST, Postman, RabbitMQ, Gradle,
+                        Swagger, Jira, Rally</p>
+                    <p>Pittsburgh, PA</p>
+                    <ul>
+                        <li>&nbsp;Developed and Remediated 50+ component and integration tests via a proprietary Cake
+                            framework, an integration and end-to-end testing framework that simplifies REST API tests for
+                            Care Orchestrator.
+                        </li>
+                        <li>Achieved a 75% decrease in failing and flaky tests in the Cake end-to-end repository.</li>
+                        <li>Participated in Agile software practices such as, Scrum Teams, PI Planning, 2-week Iteration
+                            Planning, Retrospective, and Review.
+                        </li>
+                        <li>Debugged issues regarding search queries in GLADOS, a tracking software for test results</li>
+                        <li>&nbsp;Worked on the Candy Mountain Autonomous Testing Team and collaborated with a team of 14
+                            Software Engineers, Architects, and managers to improve the Care Orchestrator CI/CD Pipeline.
+                        </li>
+                        <li>Completed 3 features on the Notification Service resulting additional REST endpoints, RabbitMQ
+                            handlers, and a Redis Locking Mechanism to prevent simultaneous calls to POST and DELETE
+                            functionalities. Code was tested using Postman, JMeter, and Junit.
+                        </li>
+                    </ul>
+                    <p><br></p>
+                </div>
+                <div id="amazon-description">
+                    <p>Software Engineer Intern Summer 2023 - In Progress...</p>
+                </div>
+                <div id="quik-routes-description">
+                    <p>QikRoutes - <a href="https://github.com/shreynramesh/ShortestFlightPathVisualizer">GitHub Repository</a> - May 2022 &ndash; August 2022</p>
+                    <p>Languages and Technologies: Java, JavaFx, ARCGIS, Gradle, Git, Google Cloud VM</p>
+                    <ul>
+                        <li>&nbsp; &nbsp;Streamlined a backend algorithm to parse a JSON-formatted Kaggle dataset of 10000+
+                            airports and generate practical routes between airports to minimize the time complexity when
+                            searching for the shortest path.&nbsp;<br>&nbsp; &nbsp;Implemented a graph data structure to
+                            store each airport, as well as Dijkstra&rsquo;s Algorithm to find the shortest path (km) between
+                            an arbitrary chosen airport A and B.<br>&nbsp; &nbsp;Co-created a JavaFX UI with
+                            auto-completing drop-down boxes for a user-friendly experience when searching for airports as
+                            well as the ARCGIS API to allow the user to visualize the route on a full world map.<br>&nbsp;
+                            &nbsp;Facilitated active communication between 4 students to effectively collaborate and plan
+                            this 3-week long project.<br>&nbsp; &nbsp;Practiced Test-Driven Development to simplify the
+                            process of merging code using Git and the Google Cloud VM.
+                        </li>
+                    </ul>
+                    <p><br></p>
+                </div>
+                <div id="rocket-league-description">
+                    <p>Unsupervised Learning/Computer Vision Project to Analyze Rocket League Replays - In Progress...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
